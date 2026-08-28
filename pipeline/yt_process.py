@@ -253,8 +253,8 @@ def main():
     text = briefing_path.read_text()
     meta = extract_metadata(text)
 
-    # ⏰ Guard: horário de pico DeepSeek
-    if _check_peak_hours():
+    # ⏰ Guard: horário de pico DeepSeek (SÓ quando provider é deepseek)
+    if PROVIDER == "deepseek" and _check_peak_hours():
         print("   🚨 ABORTANDO: Horário de pico DeepSeek — custo 2x.")
         print("   Use --force-peak para ignorar este guard.")
         if "--force-peak" not in sys.argv:
@@ -264,14 +264,14 @@ def main():
     print(f"📺 {meta['title'][:80]}")
     print(f"   Canal: {meta['channel']} | Duração: {meta['duration']}")
     print(f"   Transcrição: {meta['transcript_len']:,} chars")
-    print(f"   API: DeepSeek ({MODEL})")
+    print(f"   API: {PROVIDER.upper()} ({_active_model()})")
     
     if meta['transcript_len'] < 100:
         print("   ⚠️ Transcrição muito curta — pulando processamento")
         sys.exit(1)
     
     # 1. TESE CENTRAL
-    print("\n[1/3] Gerando TESE CENTRAL via DeepSeek...")
+    print(f"\n[1/3] Gerando TESE CENTRAL via {PROVIDER.upper()}...")
     tese = generate_tese(meta)
     print(f"   {'✅' if not tese.startswith('ERRO') else '❌'} {len(tese)} chars")
     if tese.startswith('ERRO'):
