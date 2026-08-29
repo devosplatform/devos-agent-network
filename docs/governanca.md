@@ -25,7 +25,7 @@ sistema.
 |-------|-----|----------|
 | SSH + MCP | Comando síncrono entre nós | ~1-2s |
 | git (triade/) | Documentos, decisões, atas | ~5min (push automático) |
-| MQTT :2883 | Eventos/pub-sub | ~100ms |
+| MQTT (broker interno) | Eventos/pub-sub | ~100ms |
 | Relay outboxes | Handoffs assíncronos (CORTEX /tmp/) | ~2s |
 | Telegram | Entrega para humano | instantâneo |
 

@@ -44,7 +44,7 @@ NODES = [
      "detail": "Radares de mercado, varreduras, postmortems, briefings"},
     {"id": "cortex", "name": "CORTEX", "emoji": "🧠", "role": "LLM Server",
      "stack": "Ollama · 5 models · router", "status": "online",
-     "detail": "qwen32b, cortexq6, embeddings, router :9091"},
+     "detail": "qwen32b, cortexq6, embeddings, router de modelos"},
 ]
 
 GOVERNANCE_RULES = [

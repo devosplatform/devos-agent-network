@@ -77,14 +77,14 @@ Um agente que **trabalha sozinho** todos os dias:
 │                                                     │
 │  ⚡ POTÊNCIA (WSL)      🌙 LUNA (VPS)               │
 │  ├─ Orquestrador       ├─ Gateway Telegram         │
-│  ├─ YT Radar pipeline  ├─ MCP Bridge :8789         │
-│  ├─ Crons (17 jobs)    ├─ Docker + MQTT :2883      │
+│  ├─ YT Radar pipeline  ├─ MCP Bridge (interna)     │
+│  ├─ Crons (17 jobs)    ├─ Docker + MQTT (interna)  │
 │  └─ Handoffs/Decisões  └─ cloudflared tunnel       │
 │                                                     │
 │  🔪 BISTURI (PAD)      🧠 CORTEX (LLM Server)      │
-│  ├─ Radares mercado    ├─ Ollama :11434            │
+│  ├─ Radares mercado    ├─ Ollama (interna)         │
 │  ├─ Varreduras         ├─ 5 modelos (qwen32b etc)  │
-│  └─ Postmortems        └─ Router :9091             │
+│  └─ Postmortems        └─ Router de modelos        │
 │                                                     │
 │  └── Comunicação: SSH + MQTT + git + relay outboxes │
 └─────────────────────────────────────────────────────┘

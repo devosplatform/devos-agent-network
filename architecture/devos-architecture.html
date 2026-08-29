@@ -71,26 +71,21 @@
       <rect width="960" height="540" fill="url(#grid)"/>
 
       <!-- Arrows (draw early, behind boxes) -->
-      <!-- POTENCIA <-> LUNA -->
       <line x1="260" y1="140" x2="400" y2="140" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
       <line x1="400" y1="165" x2="260" y2="165" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
-      <text x="330" y="128" fill="#94a3b8" font-size="8" text-anchor="middle">SSH + MCP :8789</text>
+      <text x="330" y="128" fill="var(--label)" font-size="8" text-anchor="middle">SSH + MCP bridge</text>
 
-      <!-- LUNA <-> CORTEX -->
       <line x1="700" y1="140" x2="560" y2="140" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
-      <text x="630" y="128" fill="#94a3b8" font-size="8" text-anchor="middle">Ollama :11434 (tunnel)</text>
+      <text x="630" y="128" fill="var(--label)" font-size="8" text-anchor="middle">Ollama (túnel)</text>
 
-      <!-- POTENCIA <-> CORTEX -->
       <line x1="260" y1="310" x2="560" y2="310" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
-      <text x="410" y="298" fill="#94a3b8" font-size="8" text-anchor="middle">SSH relay outboxes /tmp/*</text>
+      <text x="410" y="298" fill="var(--label)" font-size="8" text-anchor="middle">SSH relay outboxes /tmp/*</text>
 
-      <!-- BISTURI <-> CORTEX -->
       <line x1="700" y1="310" x2="560" y2="310" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow-rose)"/>
-      <text x="630" y="298" fill="#94a3b8" font-size="8" text-anchor="middle">SSH (WireGuard unilateral)</text>
+      <text x="630" y="298" fill="var(--label)" font-size="8" text-anchor="middle">SSH (WireGuard unilateral)</text>
 
-      <!-- POTENCIA <-> BISTURI via LUNA -->
       <path d="M 260 380 C 260 460 700 460 700 380" fill="none" stroke="#fb923c" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#arrow-orange)"/>
-      <text x="480" y="480" fill="#94a3b8" font-size="8" text-anchor="middle">Async: git + MQTT :2883 + relay outboxes</text>
+      <text x="480" y="480" fill="var(--label)" font-size="8" text-anchor="middle">Async: git + MQTT + relay outboxes</text>
 
       <!-- ===== NODE: POTENCIA ===== -->
       <g>
@@ -105,7 +100,7 @@
         <text x="80" y="202" fill="var(--card-text)" font-size="9">• Reflection weekly</text>
         <text x="80" y="228" fill="var(--card-sub)" font-size="8">LLM: DeepSeek / Gemini</text>
         <text x="80" y="242" fill="var(--card-sub)" font-size="8">Adapter: YT_PROVIDER env</text>
-        <text x="80" y="264" fill="var(--card-sub)" font-size="8">Gateway :8643 (local)</text>
+        <text x="80" y="264" fill="var(--card-sub)" font-size="8">Gateway local (porta interna)</text>
       </g>
 
       <!-- ===== NODE: LUNA ===== -->
@@ -115,13 +110,13 @@
         <text x="520" y="79" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">🌙 LUNA</text>
         <text x="520" y="102" fill="var(--card-sub)" font-size="9" text-anchor="middle">Central Hub (VPS)</text>
         <text x="440" y="130" fill="var(--card-text)" font-size="9">• Hermes Gateway</text>
-        <text x="440" y="148" fill="var(--card-text)" font-size="9">• MCP Bridge :8789</text>
+        <text x="440" y="148" fill="var(--card-text)" font-size="9">• MCP Bridge</text>
         <text x="440" y="166" fill="var(--card-text)" font-size="9">• Telegram bot</text>
-        <text x="440" y="184" fill="var(--card-text)" font-size="9">• Docker + MQTT :2883</text>
+        <text x="440" y="184" fill="var(--card-text)" font-size="9">• Docker + MQTT</text>
         <text x="440" y="202" fill="var(--card-text)" font-size="9">• cloudflared tunnel</text>
-        <text x="440" y="228" fill="var(--card-sub)" font-size="8">Web :3000 · API :8642</text>
+        <text x="440" y="228" fill="var(--card-sub)" font-size="8">Web + API (portas internas)</text>
         <text x="440" y="242" fill="var(--card-sub)" font-size="8">Shared MESA.md (git)</text>
-        <text x="440" y="264" fill="var(--card-sub)" font-size="8">Contabo VPS 147.93.190.63</text>
+        <text x="440" y="264" fill="var(--card-sub)" font-size="8">Contabo VPS (endereço privado)</text>
       </g>
 
       <!-- ===== NODE: CORTEX ===== -->
@@ -130,13 +125,13 @@
         <rect x="560" y="200" width="200" height="28" rx="8" fill="#78350f" opacity="0.9"/>
         <text x="660" y="219" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">🧠 CORTEX</text>
         <text x="660" y="242" fill="var(--card-sub)" font-size="9" text-anchor="middle">LLM Server</text>
-        <text x="580" y="270" fill="var(--card-text)" font-size="9">• Ollama :11434</text>
+        <text x="580" y="270" fill="var(--card-text)" font-size="9">• Ollama</text>
         <text x="580" y="288" fill="var(--card-text)" font-size="9">• 5 models: qwen32b,</text>
         <text x="580" y="302" fill="var(--card-text)" font-size="9">  cortexq6, cortex, embed</text>
-        <text x="580" y="320" fill="var(--card-text)" font-size="9">• Router :9091</text>
-        <text x="580" y="346" fill="var(--card-sub)" font-size="8">62GB RAM · 290GB disk</text>
+        <text x="580" y="320" fill="var(--card-text)" font-size="9">• Router de modelos</text>
+        <text x="580" y="346" fill="var(--card-sub)" font-size="8">RAM/disk: médio porte</text>
         <text x="580" y="360" fill="var(--card-sub)" font-size="8">Relay outboxes /tmp/*</text>
-        <text x="580" y="382" fill="var(--card-sub)" font-size="8">167.86.76.43</text>
+        <text x="580" y="382" fill="var(--card-sub)" font-size="8">Servidor LLM (endereço privado)</text>
       </g>
 
       <!-- ===== NODE: BISTURI ===== -->
@@ -151,7 +146,7 @@
         <text x="720" y="184" fill="var(--card-text)" font-size="9">• Postmortems</text>
         <text x="720" y="202" fill="var(--card-text)" font-size="9">• Briefings matinais</text>
         <text x="720" y="228" fill="var(--card-sub)" font-size="8">Kali / proot (Android)</text>
-        <text x="720" y="242" fill="var(--card-sub)" font-size="8">autossh reverse :2223</text>
+        <text x="720" y="242" fill="var(--card-sub)" font-size="8">autossh reverse (túnel)</text>
         <text x="720" y="264" fill="var(--card-sub)" font-size="8">WireGuard unilateral</text>
       </g>
 
@@ -159,17 +154,17 @@
       <g transform="translate(60, 500)">
         <rect x="0" y="0" width="840" height="28" rx="6" fill="#0f172a" stroke="#1e293b"/>
         <circle cx="24" cy="14" r="5" fill="rgba(8,51,68,0.4)" stroke="#22d3ee"/>
-        <text x="36" y="18" fill="#94a3b8" font-size="8">Orchestrator (cyan)</text>
+        <text x="36" y="18" fill="var(--label)" font-size="8">Orchestrator (cyan)</text>
         <circle cx="170" cy="14" r="5" fill="rgba(6,78,59,0.4)" stroke="#34d399"/>
-        <text x="182" y="18" fill="#94a3b8" font-size="8">Hub (emerald)</text>
+        <text x="182" y="18" fill="var(--label)" font-size="8">Hub (emerald)</text>
         <circle cx="290" cy="14" r="5" fill="rgba(120,53,15,0.3)" stroke="#fbbf24"/>
-        <text x="302" y="18" fill="#94a3b8" font-size="8">LLM Server (amber)</text>
+        <text x="302" y="18" fill="var(--label)" font-size="8">LLM Server (amber)</text>
         <circle cx="430" cy="14" r="5" fill="rgba(136,19,55,0.4)" stroke="#fb7185"/>
-        <text x="442" y="18" fill="#94a3b8" font-size="8">Watchdog (rose)</text>
+        <text x="442" y="18" fill="var(--label)" font-size="8">Watchdog (rose)</text>
         <line x1="570" y1="14" x2="600" y2="14" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="6,4"/>
-        <text x="606" y="18" fill="#94a3b8" font-size="8">Async message bus</text>
+        <text x="606" y="18" fill="var(--label)" font-size="8">Async message bus</text>
         <line x1="740" y1="14" x2="770" y2="14" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="776" y="18" fill="#94a3b8" font-size="8">Sync SSH/MCP</text>
+        <text x="776" y="18" fill="var(--label)" font-size="8">Sync SSH/MCP</text>
       </g>
     </svg>
   </div>
