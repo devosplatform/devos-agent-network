@@ -151,7 +151,7 @@ def dashboard():
   .metric-value {{ font-size: 28px; font-weight: 700; color: #22d3ee; margin: 6px 0 2px; }}
   .metric-label {{ font-size: 12px; color: #94a3b8; }}
   .section {{ margin-bottom: 32px; }}
-  .section-title {{ font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #64748b; margin-bottom: 16px; }}
+  .section-title {{ font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #94a3b8; margin-bottom: 16px; }}
   .section-title span {{ color: #22d3ee; }}
   .grid {{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }}
   .node-card {{ background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 20px; transition: border-color 0.2s; }}
@@ -163,14 +163,14 @@ def dashboard():
   .status-pill {{ margin-left: auto; display: inline-flex; align-items: center; gap: 6px; background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3); color: #34d399; padding: 4px 10px; border-radius: 12px; font-size: 11px; text-transform: uppercase; }}
   .status-pill .dot {{ width: 6px; height: 6px; background: #34d399; border-radius: 50%; }}
   .node-detail {{ font-size: 13px; color: #cbd5e1; margin-bottom: 8px; }}
-  .node-stack {{ font-size: 11px; color: #64748b; font-family: 'Cascadia Code', 'Consolas', monospace; }}
+  .node-stack {{ font-size: 11px; color: #94a3b8; font-family: 'Cascadia Code', 'Consolas', monospace; }}
   .info-card {{ background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 20px; }}
   .info-card h3 {{ font-size: 14px; color: #f8fafc; margin-bottom: 12px; }}
   .info-card ul {{ list-style: none; }}
-  .info-card li {{ font-size: 13px; color: #94a3b8; padding: 6px 0; border-bottom: 1px solid #1e293b; }}
+  .info-card li {{ font-size: 13px; color: #cbd5e1; padding: 6px 0; border-bottom: 1px solid #1e293b; }}
   .info-card li:last-child {{ border-bottom: none; }}
   .info-card li::before {{ content: '▹ '; color: #22d3ee; }}
-  .footer {{ text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid #1e293b; color: #475569; font-size: 12px; }}
+  .footer {{ text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid #1e293b; color: #94a3b8; font-size: 12px; }}
   .footer a {{ color: #22d3ee; text-decoration: none; }}
   .footer .ts {{ display: block; margin-top: 6px; font-family: 'Cascadia Code', monospace; font-size: 11px; }}
   @media (max-width: 700px) {{ .metrics {{ grid-template-columns: repeat(2, 1fr); }} .grid {{ grid-template-columns: 1fr; }} }}
